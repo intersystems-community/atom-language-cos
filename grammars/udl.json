@@ -435,12 +435,23 @@
           "include": "#system-functions"
         },
         {
+          "include": "#keyword-operator-logical"
+        },
+        {
           "include": "#sql-keyword"
         },
         {
           "include": "#class-keyword"
         }
       ]
+    },
+    "keyword-operator-logical": {
+      "match": "(&&|&|!|'|\\|\\|)",
+      "captures": {
+        "1": {
+          "name": "keyword.operator.logical.udl"
+        }
+      }
     },
     "action-keywords": {
       "match": "(?i)\\b(SET|S|DO|D|KILL|K|GOTO|G|READ|R|WRITE|W|OPEN|O|USE|U|CLOSE|C|CONTINUE|FOR|F|HALT|HANG|H|JOB|J|LOCK|L|MERGE|M|NEW|N|QUIT|Q|RETURN|RET|TSTART|TS|TCOMMIT|TC|TROLLBACK|TR|THROW|VIEW|V|XECUTE|X|ZKILL|ZK|ZNSPACE|ZN|ZTRAP|ZWRITE|ZW|ZZDUMP|ZZWRITE)\\b",
